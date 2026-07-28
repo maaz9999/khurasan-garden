@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --kg-teal: #17bfc8;
+    --kg-deep-teal: #07525d;
+    --kg-navy: #092e3a;
+    --kg-ivory: #f7f5ef;
+    --kg-sand: #dccdb6;
+    --kg-green: #839b77;
+    --kg-charcoal: #172326;
+    --kg-white: #ffffff;
+  }
+
+  body {
+    background-color: var(--kg-ivory);
+    color: var(--kg-charcoal);
+    font-family: var(--font-manrope), sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-cormorant), serif;
+  }
+}
+
+/* Custom Utilities */
+.bg-kg-ivory { background-color: var(--kg-ivory); }
+.bg-kg-navy { background-color: var(--kg-navy); }
+.bg-kg-deep-teal { background-color: var(--kg-deep-teal); }
+.bg-kg-teal { background-color: var(--kg-teal); }
+.bg-kg-sand { background-color: var(--kg-sand); }
+.bg-kg-green { background-color: var(--kg-green); }
+
+.text-kg-teal { color: var(--kg-teal); }
+.text-kg-deep-teal { color: var(--kg-deep-teal); }
+.text-kg-navy { color: var(--kg-navy); }
+.text-kg-ivory { color: var(--kg-ivory); }
+.text-kg-sand { color: var(--kg-sand); }
+.text-kg-green { color: var(--kg-green); }
+.text-kg-charcoal { color: var(--kg-charcoal); }
+
+.border-kg-teal { border-color: var(--kg-teal); }
+.border-kg-deep-teal { border-color: var(--kg-deep-teal); }
+.border-kg-sand { border-color: var(--kg-sand); }
+
+/* Glassmorphism */
+.glass-panel {
+  background: rgba(247, 245, 239, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(220, 205, 182, 0.4);
+}
+
+.glass-dark {
+  background: rgba(9, 46, 58, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(23, 191, 200, 0.2);
+}
+
+/* Fluid Typography Helpers */
+.fluid-hero {
+  font-size: clamp(2.25rem, 5.5vw + 1rem, 4.75rem);
+  line-height: 1.08;
+}
+
+.fluid-h2 {
+  font-size: clamp(1.85rem, 3.5vw + 0.8rem, 3.25rem);
+  line-height: 1.15;
+}
+
+.fluid-h3 {
+  font-size: clamp(1.35rem, 2vw + 0.5rem, 2.25rem);
+  line-height: 1.2;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--kg-ivory);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--kg-deep-teal);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--kg-teal);
+}
